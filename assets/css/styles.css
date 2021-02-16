@@ -1,0 +1,47 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', sans-serif ;
+    margin: 5px auto;
+}
+
+body{
+    font-family: Poppins, serif;
+}
+
+:root {
+    --primary: #161616;
+    --secondary: #EDECE7;
+    --tertiary: #957F3B;
+}
+
+.custom-bg-black {
+    background-color:var(--primary);
+}
+
+.custom-bg-white {
+    background-color:var(--secondary);
+}
+
+.custom-bg-beige {
+    background-color:var(--tertiary);
+}
+
+.custom-black {
+    color:var(--primary);
+}
+
+.custom-white {
+    color:var(--secondary);
+}
+
+.custom-beige {
+    color:var(--tertiary);
+}
+
+h1{
+    color:var(--tertiary);
+}
+
+.job_description{
+    color:var(--tertiary);
+}
+
