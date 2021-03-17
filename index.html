@@ -25,7 +25,16 @@
   ::-webkit-scrollbar-thumb:hover {
     background: var(--primary);
   }
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto+Slab:wght@400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto+Slab:wght@400&display=swap');
+
+  /* navigation 
+  - show navigation always on the large screen devices with (min-width:1024)
+  */
+  @media (min-width: 1024px) {
+    .top-navbar {
+      display: inline-flex !important;
+    }
+  }
   </style>
    <!-- Our project just needs Font Awesome Solid + Brands -->
    <link href="./assets/icons/css/fontawesome.min.css" rel="stylesheet">
@@ -40,8 +49,66 @@
 </head>
 <body>
   <header>
+    <!-- All screens -->
+    <nav class="flex items-center custom-bg-black p-3 flex-wrap lg:uppercase font-sans fixed top-0 inset-x-0 z-20">
+      <a href="#" class="p-2 mr-4 inline-flex items-center">
+        <!-- <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-current text-white h-8 w-8 mr-2"
+        >
+          <path
+            d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+          />
+        </svg> -->
+        <!-- <span class="text-xl text-white font-bold uppercase tracking-wide"
+          >DKM</span
+        > -->
+      </a>
+      <button
+        class="text-white inline-flex p-3 hover:bg-gray-900 lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+        data-target="#navigation"
+      >
+      <i class="fas fa-bars text-lg md:text-2xl"></i>
+      </button>
+      <div
+        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+        id="navigation"
+      >
+        <div
+          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto"
+        >
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Porfolio</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>About</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>My Resume</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
     <!-- mobile screen -->
-    <div class="md:hidden w-full px-3 py-2 custom-bg-black">
+    <div class="md:hidden w-full pt-16 px-3 py-2 custom-bg-black">
+      <div class="w-10 custom-bg-white mx-auto mb-2" style="height:0.5px;"></div>
       <h1 class="font-semibold uppercase">Derrick K. Mbarani</h1>
       <ul class="list-none">
         <li class="job_description pl-3">Web Developer</li>
@@ -62,22 +129,22 @@
           <li class="job_description px-2 inline">Cloud Practitioner</li>
         </ul>
         <div class="absolute inset-x-0 bottom-0 mb-4">
-          <i class="fas fa-angle-down custom-white text-4xl opacity-75"></i>
+          <a href="#main"><i class="fas fa-angle-down custom-white text-4xl cursor-pointer"></i></a>
         </div>
       </div>
     </div>
   </header>
-  <main class="flex-column md:text-lg lg:mx-10">
+  <main id="main" class="flex-column md:text-lg lg:mx-10">
     <section class="flex-column mb-6 md:py-6 md:mb-0 md:pl-4">
       <div class="md:w-full md:flex md:justify-between">
         <div class="p-2 shadow md:w-1/2 md:shadow-none">        
           <div class="font-semibold md:uppercase">Client</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
           <div>Sisibo Tea</div>
@@ -86,13 +153,13 @@
           <div class="font-semibold md:uppercase">My role</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
-          <div>System Authentication</div>
+          <div>System API</div>
         </div>
       </div>
       <div class="md:w-full md:flex md:justify-between">
@@ -100,10 +167,10 @@
           <div class="font-semibold md:uppercase">Services</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
           <div>Creation, debugging, testing</div>
@@ -112,10 +179,10 @@
           <div class="font-semibold md:uppercase">Created</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
           <div>2021, remotely</div>
@@ -128,25 +195,25 @@
           <div class="font-semibold md:uppercase">Client</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
-          <div>Sisibo Tea</div>
+          <div>Moi University||KSA</div>
         </div> 
         <div class="p-2 shadow md:w-1/2 md:shadow-none">        
           <div class="font-semibold md:uppercase">My role</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
-          <div>System Authentication</div>
+          <div>System API</div>
         </div>
       </div>
       <div class="md:w-full md:flex md:justify-between">
@@ -154,10 +221,10 @@
           <div class="font-semibold md:uppercase">Services</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
           <div>Creation, debugging, testing</div>
@@ -166,10 +233,10 @@
           <div class="font-semibold md:uppercase">Created</div>
           <div class="flex justify-between">
             <div class="w-1/6 lg:w-auto">
-              <div class="custom-bg-beige h-2 w-6"></div>
+              <div class="custom-bg-beige h-1 w-6"></div>
             </div>
             <div class="w-5/6 mx-auto lg:pr-6">
-              <div class="custom-bg-white mr-4" style="height:0.25px;"></div>
+              <div class="bg-gray-300 mr-4" style="height:0.25px;"></div>
             </div>
           </div>
           <div>2021, remotely</div>
@@ -179,4 +246,18 @@
   </main>
   <footer></footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function() {
+  $(".nav-toggler").each(function(_, navToggler) {
+    var target = $(navToggler).data("target");
+    $(navToggler).on("click", function() {
+      $(target).animate({
+        height: "toggle"
+      });
+    });
+  });
+});
+
+</script>
 </html>
