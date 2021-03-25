@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../assets/css/tailwind.min.css" rel="stylesheet">
+  <style>
+    /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px var(--secondary);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--tertiary);  
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&family=Roboto+Slab:wght@400&display=swap');
+
+  /* navigation 
+  - show navigation always on the large screen devices with (min-width:1024)
+  */
+  @media (min-width: 1024px) {
+    .top-navbar {
+      display: inline-flex !important;
+    }
+  }
+  </style>
+   <!-- Our project just needs Font Awesome Solid + Brands -->
+   <link href="../assets/icons/css/fontawesome.min.css" rel="stylesheet">
+   <link href="../assets/icons/css/brands.min.css" rel="stylesheet">
+   <link href="../assets/icons/css/solid.min.css" rel="stylesheet">
+  <link href="../assets/css/styles.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <title>Derrick Mbarani</title>
+</head>
+<body>
+  <header>
+    <!-- All screens -->
+    <nav class="flex items-center custom-bg-black p-3 flex-wrap lg:lowercase font-sans fixed top-0 inset-x-0 z-20">
+      <a href="#" class="p-2 mr-4 inline-flex items-center">
+        <!-- <svg
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-current text-white h-8 w-8 mr-2"
+        >
+          <path
+            d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"
+          />
+        </svg> -->
+        <!-- <span class="text-xl text-white font-bold uppercase tracking-wide"
+          >DKM</span
+        > -->
+      </a>
+      <button
+        class="text-white inline-flex p-3 hover:bg-gray-900 lg:hidden ml-auto hover:text-white outline-none nav-toggler"
+        data-target="#navigation"
+      >
+      <i class="fas fa-bars text-lg md:text-2xl"></i>
+      </button>
+      <div
+        class="hidden top-navbar w-full lg:inline-flex lg:flex-grow lg:w-auto"
+        id="navigation"
+      >
+        <div
+          class="lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto"
+        >
+          <a
+            href="../index.html"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Portfolio</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span class="hidden lg:inline-block">Certs</span>
+            <span class="inline-block lg:hidden">Certifications</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>My Resume</span>
+          </a>
+          <a
+            href="#"
+            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
+          >
+            <span>Contact Me</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- mobile screen -->
+    <div class="md:hidden w-full pt-16 px-3 py-2 custom-bg-black">
+
+    </div>
+    <!-- larger devices -->
+    <div class="relative hidden md:flex justify-center items-center custom-bg-black"  style="height: 50vh;">
+
+    </div>
+  </header>
+  <main id="main">
+    <section class="fixed top-1 inset-x-0 md:top-24 md:mx-20 lg:mx-40">
+      <form action="" class="form bg-white p-6 my-10 relative shadow">
+        <h3 class="text-2xl text-gray-900 font-semibold">Send me a message</h3>
+        <p class="text-gray-600"> Collaborations, job offers, consulting; don't hesitate.</p>
+        <div class="flex space-x-5 mt-3">
+            <input type="text" name="" id="" placeholder="Your Name" class="border p-2  w-1/2">
+            <input type="tel" name="" id="" placeholder="Your Number" class="border p-2 w-1/2">
+        </div>
+        <input type="email" name="" id="" placeholder="Your Email" class="border p-2 w-full mt-3">
+        <textarea name="" id="" cols="10" rows="3" placeholder="Tell me about your enquiry" class="border p-2 mt-3 w-full"></textarea>
+        <p class="font-bold text-sm mt-3">GDPR Agreement *</p>
+        <div class="flex items-baseline space-x-2 mt-2">
+            <input type="checkbox" name="" id="" class="inline-block">
+            <p class="text-gray-600 text-sm">I consent to having this website store my submitted information so they can respond to my inquiry.</p>
+        </div>
+        <input type="submit" value="Submit" class="w-full mt-6 custom-bg-black hover:bg-gray-700 text-white font-semibold p-3">
+      </form>
+    </section>
+  </main>
+  <footer></footer>
+</body>
+<script src="../assets/js/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function() {
+  $(".nav-toggler").each(function(_, navToggler) {
+    var target = $(navToggler).data("target");
+    $(navToggler).on("click", function() {
+      $(target).animate({
+        height: "toggle"
+      });
+    });
+  });
+});
+
+</script>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <link href="./assets/css/tailwind.min.css" rel="stylesheet">
   <style>
     /* width */
 ::-webkit-scrollbar {
@@ -50,7 +50,7 @@
 <body>
   <header>
     <!-- All screens -->
-    <nav class="flex items-center custom-bg-black p-3 flex-wrap lg:uppercase font-sans fixed top-0 inset-x-0 z-20">
+    <nav class="flex items-center custom-bg-black p-3 flex-wrap lg:lowercase font-sans fixed top-0 inset-x-0 z-20">
       <a href="#" class="p-2 mr-4 inline-flex items-center">
         <!-- <svg
           viewBox="0 0 24 24"
@@ -95,16 +95,10 @@
             href="#"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
           >
-            <span>About</span>
-          </a>
-          <a
-            href="#"
-            class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
-          >
             <span>My Resume</span>
           </a>
           <a
-            href="#"
+            href="./pages/contactme.html"
             class="lg:inline-flex lg:w-auto w-full px-3 py-2 rounded custom-beige items-center justify-center hover:bg-gray-900 hover:text-white"
           >
             <span>Contact Me</span>
@@ -136,7 +130,7 @@
           <li class="job_description px-2 inline">Cloud Practitioner</li>
         </ul>
         <div class="absolute inset-x-0 bottom-0 mb-4">
-          <a href="#main"><i class="fas fa-angle-down custom-white text-4xl cursor-pointer"></i></a>
+          <!-- <a href="#main"><i class="fas fa-angle-down custom-white text-4xl cursor-pointer"></i></a> -->
         </div>
       </div>
     </div>
@@ -253,7 +247,7 @@
   </main>
   <footer></footer>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="./assets/js/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
 <script>
   $(document).ready(function() {
   $(".nav-toggler").each(function(_, navToggler) {
